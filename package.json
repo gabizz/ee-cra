@@ -1,0 +1,80 @@
+{
+  "name": "cra-electron",
+  "description": "CRA + Electron sitting in a tree",
+  "author": "Kitze",
+  "version": "0.2.7",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "cookie-parser": "^1.4.4",
+    "cross-env": "5.1.6",
+    "debug": "^4.1.1",
+    "electron-is-dev": "0.3.0",
+    "electron-log": "^2.2.6",
+    "express": "^4.16.4",
+    "http-errors": "^1.7.2",
+    "jade": "^1.11.0",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "prop-types": "^15.7.2",
+    "react": "16.4.2",
+    "react-dom": "16.4.2",
+    "react-icons": "^3.4.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-table": "^6.9.2",
+    "reactn": "^1.0.0",
+    "update-electron-app": "^1.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "3.5.1",
+    "electron": "2.0.2",
+    "electron-builder": "^20.15.1",
+    "prettier": "^1.4.4",
+    "react-scripts": "1.1.4",
+    "wait-on": "2.1.0"
+  },
+  "main": "public/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test --env=jsdom",
+    "react-eject": "react-scripts eject",
+    "electron-build": "electron-builder",
+    "pack": "electron-builder  --dir",
+    "release": "yarn react-build && electron-builder --publish=always",
+    "build": "yarn react-build && yarn electron-build",
+    "start": "concurrently  \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "build": {
+    "appId": "com.electron.reactapp",
+    "icon": "favicon.ico",
+    "files": {
+      "filter": [
+        "dist/**/*",
+        "build/**/*",
+        "express/**/*",
+        "node_modules/**/*",
+        "package.json"
+      ]
+    },
+    "directories": {
+      "buildResources": "assets"
+    },
+    "publish": {
+      "provider": "github"
+    }
+  },
+  "pack": {
+    "appId": "com.electron.reactapp"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": true,
+    "allowToChangeInstallationDirectory ": true,
+    "installerIcon": "favicon.ico",
+    "createDesktopShortcut": true
+  }
+}

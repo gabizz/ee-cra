@@ -1,0 +1,27 @@
+.loader:before {
+  content: '';
+  /* background: navy; */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.loader:after {
+  content: url('../assets/spinner.gif');
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  z-index: 999999999;
+  color:#dadada;
+  text-align:center;
+  font-weight:bold;
+  /* font-size:2.5rem;         */
+}
+
+@media print { 
+  .loader {visibility: hidden}
+}
