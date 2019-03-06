@@ -21,7 +21,7 @@ var port = normalizePort(process.env.PORT || '3333');
  */
 
 var server = http.createServer(app);
-console.log("Server:", server)
+
 /**
  * Listen on provided port, on all network interfaces.
  */
@@ -87,6 +87,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-    console.log(addr)
   debug('Listening on ' + bind);
 }

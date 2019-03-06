@@ -1,6 +1,6 @@
 {
   "name": "cra-electron",
-  "description": "CRA + Electron sitting in a tree",
+  "description": "CRA + Express + Electron ",
   "author": "Kitze",
   "version": "0.2.7",
   "private": true,
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "concurrently": "3.5.1",
-    "electron": "2.0.2",
+    "electron": "2.0.8",
     "electron-builder": "^20.15.1",
     "prettier": "^1.4.4",
     "react-scripts": "1.1.4",
