@@ -1,12 +1,21 @@
-### 🙋‍♂️ Made by [@thekitze](https://twitter.com/thekitze)  -   customized by Gabizz
+### 🙋‍♂️ Made by [@thekitze](https://twitter.com/thekitze)  -   customized by me  Gabizz (https://github.com/gabizz)
 
 
-An example of using create-react-app and Electron.
+### A functional boilerplate for Electron + Express + React (Create React App).
+
+## How to use it
+
+- clone this repo
+- run  `yarn`
+- use one of the scripts below
 
 ## Scripts
 ```yarn start``` will start the Electron app and the React app at the same time.  
-```yarn pack``` will pack the electron app without rebuilding the React app (quicker testing of Express Rest Api) 
+```yarn pack``` will pack the electron app without rebuilding the React app (quicker testing of Express Rest Api).
 ```yarn build``` will build the React app and package it along the Electron app.
+
+## NOTE
+All the dependecies (including those concerning Express) shall be installed in the main package.json 
 
 ## Read more
 
